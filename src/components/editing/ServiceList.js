@@ -4,7 +4,7 @@ import {useSelector} from "react-redux";
 
 
 const ServiceList = () => {
-    const services = useSelector((state) => state.servicesList)
+    const services = useSelector((state) => state.servicesList);
     return (
         <>
             <ul>

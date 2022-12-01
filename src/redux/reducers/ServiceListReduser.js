@@ -5,7 +5,8 @@ import uuid from "react-uuid";
 import {
     ADD_SERVICE_ITEM,
     DELETE_SERVICE_ITEM,
-    EDIT_SERVICE_ITEM
+    EDIT_SERVICE_ITEM,
+    FILTER_SERVICES
 } from "../actions/serviceListActions";
 
 const initialState = serviceList;
@@ -23,8 +24,13 @@ function ServiceListReducer(state = initialState, action) {
         case EDIT_SERVICE_ITEM:
             const serviceItem = action.payload;
             const serviceIndex = state.findIndex(service => service.id === serviceItem.id);
-            state[serviceIndex] = {...serviceIndex, ...serviceItem}
-            return [...state];
+            return state.map((service, index) => {
+                return (index !== serviceIndex) ? service : {...service, ...serviceItem};
+            });
+        case FILTER_SERVICES:
+            const filterParams = action.payload;
+            const searchResult = state.filter(service => service.name.toLowerCase().includes(filterParams));
+            return (filterParams === '') ? initialState : searchResult;
         default:
             return state;
     }
