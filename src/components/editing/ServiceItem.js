@@ -6,7 +6,7 @@ import {
     CHANGE_STATE_SERVICE_ITEM,
     DELETE_SERVICE_ITEM,
     RESET_STATE_SERVICE_ITEM
-} from "../../redux/actions/serviceListActions";
+} from "../../redux/actions/servicesActions";
 
 
 const ServiceItem = (props) => {

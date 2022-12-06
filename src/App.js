@@ -5,6 +5,7 @@ import {Layout} from "./components/Layout";
 import {Home} from "./pages/Home";
 import {Notfound} from "./pages/Notfound";
 import {Editing} from "./pages/Editing";
+import {Catalog} from "./pages/Catalog";
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
                 <Route path='/' element={<Layout/>}>
                     <Route path='/' index element={<Home/>}/>
                     <Route path='/editing' index element={<Editing/>}/>
+                    <Route path='/shop' index element={<Catalog/>}/>
                     <Route path='*' element={<Notfound/>}/>
                 </Route>
 

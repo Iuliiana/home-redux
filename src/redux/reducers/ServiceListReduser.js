@@ -7,7 +7,7 @@ import {
     DELETE_SERVICE_ITEM,
     EDIT_SERVICE_ITEM,
     FILTER_SERVICES
-} from "../actions/serviceListActions";
+} from "../actions/servicesActions";
 
 const initialState = serviceList;
 

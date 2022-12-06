@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {Input} from "../../ui/input/Input";
-import {useDispatch, useSelector} from "react-redux";
-import {FILTER_SERVICES} from "../../redux/actions/serviceListActions";
+import {useDispatch} from "react-redux";
+import {FILTER_SERVICES} from "../../redux/actions/servicesActions";
 
 const ServiceFilter = () => {
     const dispatch = useDispatch();

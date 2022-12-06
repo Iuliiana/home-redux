@@ -7,7 +7,7 @@ import {
     EDIT_SERVICE_ITEM,
     RESET_STATE_SERVICE_ITEM,
     SAVE_SERVICE_ITEM
-} from "../../redux/actions/serviceListActions";
+} from "../../redux/actions/servicesActions";
 import {isEmptyObjParams} from "../../helper";
 
 

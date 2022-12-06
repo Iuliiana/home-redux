@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
-import {CHANGE_STATE_SERVICE_ITEM, RESET_STATE_SERVICE_ITEM, SAVE_SERVICE_ITEM} from "../actions/serviceListActions";
+import {CHANGE_STATE_SERVICE_ITEM, RESET_STATE_SERVICE_ITEM, SAVE_SERVICE_ITEM} from "../actions/servicesActions";
 
 const initialState = {
     id: 0,
@@ -8,7 +8,7 @@ const initialState = {
     price: ''
 }
 
-function serviceItemReducer(state = initialState, action) {
+function ServiceItemReducer(state = initialState, action) {
     switch (action.type) {
         case SAVE_SERVICE_ITEM:
             const {fieldName, fieldValue} = action.payload;
@@ -23,4 +23,4 @@ function serviceItemReducer(state = initialState, action) {
     }
 }
 
-export default serviceItemReducer;
+export default ServiceItemReducer;
